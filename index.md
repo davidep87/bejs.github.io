@@ -1,37 +1,69 @@
-## Welcome to GitHub Pages
+## Welcome to beJS
 
-You can use the [editor on GitHub](https://github.com/davidep87/bejs.github.io/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
+## Installation
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+### Node.js
+```javascript
+npm install bejs --save
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+### Browser
 
-### Jekyll Themes
+#### Local
+```html
+<script src="node_modules/bejs/dist/be.min.js"></script>
+```
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/davidep87/bejs.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+#### CDN unpkg
+```html
+<script src="https://unpkg.com/bejs/dist/be.min.js"></script>
+```
 
-### Support or Contact
+#### CDN jsDeliver
+```html
+<script src="https://cdn.jsdelivr.net/npm/bejs/dist/be.min.js"></script>
+```
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+## Example
+```javascript
+const be = require('bejs');
+
+// call a method
+be.boolean(true);
+
+// call interface "not"
+be.not.boolean(1);
+
+// call interface "all" and passing arguments
+be.all.boolean(true, false, true);
+
+// call interface "all" and passing array
+be.all.boolean([true, false, true]);
+
+// call interface "any" and passing arguments
+be.any.boolean(true, false, 1);
+```
+
+
+
+## Docs
+- [API](docs/be.md)
+    - [Arrays](docs/arrays.md)
+    - [Dates](docs/dates.md)
+    - [Envs](docs/envs.md)
+    - [Hashes](docs/hashes.md)
+    - [Mixed](docs/mixed.md)
+    - [Numbers](docs/numbers.md)
+    - [Objects](docs/objects.md)
+    - [Strings](docs/strings.md)
+    - [Types](docs/types.md)
+    - [Urls](docs/urls.md)
+    - [CreditCards](docs/creditCards.md)
+    - [PostalCodes](docs/postalCodes.md)
+    - [DOM](docs/dom.md)
+
+## License
+beJS is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
+
+## Author
+[Fabio Ricali](http://rica.li)
