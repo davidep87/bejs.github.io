@@ -67,5 +67,8 @@ be.any.boolean(true, false, 1);
 ## License
 beJS is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
 
+## Collaborator
+[Davide Polano](https://www.mdslab.org)
+
 ## Author
 [Fabio Ricali](http://rica.li)
