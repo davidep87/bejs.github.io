@@ -2,7 +2,6 @@ theme: jekyll-theme-cayman
 title: beJS Assertion framework
 description: beJS is a simple and light-weight assertions framework for javascript
 google_analytics: UA-101992896-1
-
 repository_name: beJS
 repository_url: https://github.com/fabioricali/beJS
 owner_name: Fabio Ricali
