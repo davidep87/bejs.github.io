@@ -1,3 +1,9 @@
 theme: jekyll-theme-cayman
 google_analytics: UA-101992896-1
-baseurl: https://github.com/fabioricali/beJS
+github:
+  repository_url: https://github.com/fabioricali/beJS
+author:
+  name:       Fabio Ricali
+  url:        http://rica.li
+  name:       Davide Polano
+  url:        https://www.mdslab.org
