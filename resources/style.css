@@ -37,3 +37,11 @@ body{
 .lead.description{
     margin-bottom: 40px;
 }
+
+.navbar-inverse .navbar-nav>li>a {
+    color: #ead5bd;
+}
+
+.navbar-inverse .navbar-brand {
+    color: #ead5bd;
+}

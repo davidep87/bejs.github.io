@@ -2,9 +2,51 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>beJS - documentation</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+        }
+        .version-container{
+            padding: 10px;
+            font-size: 14px;
+            background: #000;
+            color: #fff;
+        }
+        .docs-container{
+            position: absolute;
+            width: 100%;
+            height: calc(100% - 40px);
+            top: 40px;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 </head>
 <body>
+<div class="version-container"><label for="version-combo">Version:</label> <select id="version-combo"></select></div>
+<iframe id="iframe" frameborder="0" src="" class="docs-container"></iframe>
+<script>
+    (function () {
+        var listItems = '';
+        var versionCombo = $('#version-combo');
+        var iframe = $('#iframe');
 
+        $.getJSON('versions.json', function (data) {
+            $.each(data,function(i){
+                listItems += '<option value="docs/' + data[i].dir + '">' + data[i].name + '</option>';
+            });
+            versionCombo.append(listItems);
+            versionCombo.val('docs/'+data[0].dir).change();
+        });
+
+        versionCombo.on('change', function () {
+            iframe.attr('src', this.value);
+        });
+
+    })();
+</script>
 </body>
 </html>
