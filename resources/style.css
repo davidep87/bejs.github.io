@@ -1,0 +1,39 @@
+/**
+ * Created by fabioricali on 05/07/2017.
+ */
+body{
+}
+
+.logo{
+    margin-bottom: 20px;
+}
+
+.container-box{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.center-box{
+    text-align: center;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    width: 320px;
+}
+
+.navbar-inverse {
+    background-color: #4b2524;
+    border-color: #080808;
+}
+
+.motto{
+    font-weight: bold;
+    font-style: italic;
+    font-size: 16px;
+    margin-bottom: 40px;
+}
+
+.lead.description{
+    margin-bottom: 40px;
+}
