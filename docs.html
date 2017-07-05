@@ -34,18 +34,18 @@
         var listItems = '';
         var versionCombo = $('#version-combo');
         var iframe = $('#iframe');
-
+        var docRoot = 'https://be.js.org/docs/';
         var data = __versions;
 
         $.each(data, function(i){
-            listItems += '<option value="docs/' + data[i].dir + '">' + data[i].name + '</option>';
+            listItems += '<option value="'+ docRoot + data[i].dir + '">' + data[i].name + '</option>';
         });
 
         versionCombo.on('change', function () {
             iframe.attr('src', this.value);
         });
 
-        versionCombo.append(listItems).val('docs/'+data[0].dir).change();
+        versionCombo.append(listItems).val(docRoot +data[0].dir).change();
 
     })();
 </script>
