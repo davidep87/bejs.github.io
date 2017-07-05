@@ -34,7 +34,7 @@
         var versionCombo = $('#version-combo');
         var iframe = $('#iframe');
 
-        $.getJSON('versions.json', function (data) {
+        $.getJSON('https://be.js.org/versions.json', function (data) {
             $.each(data,function(i){
                 listItems += '<option value="docs/' + data[i].dir + '">' + data[i].name + '</option>';
             });
