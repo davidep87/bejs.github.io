@@ -11,8 +11,10 @@ body{
 .container-box{
     position: absolute;
     width: 100%;
-    height: calc(100% - 50px);
+    height: calc(100% - 100px);
     top: 50px;
+    bottom: 50px;
+    overflow-y: auto;
 }
 .center-box{
     text-align: center;
@@ -49,4 +51,14 @@ body{
 
 .footer{
     text-align: center;
+}
+
+.navbar-inverse .navbar-toggle:focus, .navbar-inverse .navbar-toggle:hover {
+    background-color: #dbb886;
+}
+
+@media screen and ( max-height: 510px ){
+    .center-box{
+        margin-top: 100px;
+    }
 }
