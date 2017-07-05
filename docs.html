@@ -24,6 +24,7 @@
         }
     </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="versions.js"></script>
 </head>
 <body>
 <div class="version-container"><label for="version-combo">Version:</label> <select id="version-combo"></select></div>
@@ -34,17 +35,17 @@
         var versionCombo = $('#version-combo');
         var iframe = $('#iframe');
 
-        $.getJSON('https://be.js.org/versions.json?callback=?', function (data) {
-            $.each(data,function(i){
-                listItems += '<option value="docs/' + data[i].dir + '">' + data[i].name + '</option>';
-            });
-            versionCombo.append(listItems);
-            versionCombo.val('docs/'+data[0].dir).change();
+        var data = __versions;
+
+        $.each(data, function(i){
+            listItems += '<option value="docs/' + data[i].dir + '">' + data[i].name + '</option>';
         });
 
         versionCombo.on('change', function () {
             iframe.attr('src', this.value);
         });
+
+        versionCombo.append(listItems).val('docs/'+data[0].dir).change();
 
     })();
 </script>
