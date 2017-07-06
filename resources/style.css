@@ -23,6 +23,7 @@ body{
     left: 50%;
     transform: translateY(-50%) translateX(-50%);
     width: 320px;
+    z-index: 2;
 }
 
 .navbar-inverse {
@@ -35,6 +36,7 @@ body{
     font-style: italic;
     font-size: 16px;
     margin-bottom: 40px;
+    display: none;
 }
 
 .lead.description{
@@ -61,4 +63,11 @@ body{
     .center-box{
         margin-top: 100px;
     }
+}
+
+#particle canvas{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
 }
